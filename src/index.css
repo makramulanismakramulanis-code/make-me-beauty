@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --berry: #3E0F2B;
+    --plum: #5A1A3F;
+    --orchid: #C2185B;
+    --orchid-glow: #E8458B;
+    --rose-gold: #D9A38F;
+    --gold: #E8B84A;
+    --blush: #FBE9EC;
+    --cream: #FFF8F4;
+    --ink: #2A1822;
+    --white: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--cream);
+    color: var(--ink);
+    line-height: 1.65;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom arch shape utilities */
+.arch-top {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.arch-full {
+  border-radius: 9999px 9999px 24px 24px;
+}
+
+/* Subtle sparkle pulse animation */
+@keyframes sparkleFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-8px) scale(1.15);
+    opacity: 1;
+  }
+}
+
+.animate-sparkle {
+  animation: sparkleFloat 4s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-sparkle,
+  .animate-marquee {
+    animation: none !important;
+  }
+  .scroll-smooth {
+    scroll-behavior: auto !important;
+  }
+}

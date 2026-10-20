@@ -1,0 +1,6 @@
+{
+  "name": "Make Me Beauty Place",
+  "description": "Premier beauty parlour at 44 Bode Thomas St, Surulere, Lagos. Professional makeup, hair styling, braids, wigs, nails, lashes, facials, and bridal glam.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
