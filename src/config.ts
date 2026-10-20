@@ -16,15 +16,24 @@
 
 import { DEFAULT_SCHEDULE, WeeklySchedule } from './utils/businessLogic';
 
+// Import image assets directly so Vite bundles them into production dist output on Vercel
+import heroPortraitImg from './assets/images/hero_glam_portrait_1792490187265.jpg';
+import bridalGlamImg from './assets/images/service_bridal_glam_1792490187276.jpg';
+import braidsHairImg from './assets/images/service_braids_hair_1792490187949.jpg';
+import manicureNailsImg from './assets/images/service_manicure_nails_1792490187881.jpg';
+import facialSpaImg from './assets/images/service_facial_spa_1792490188418.jpg';
+import lashesBrowsImg from './assets/images/service_lashes_brows_1792490219518.jpg';
+import wigInstallImg from './assets/images/service_wig_install_1792490219615.jpg';
+
 // High-fidelity image assets generated for Make Me Beauty Place
 export const IMAGES = {
-  heroPortrait: '/src/assets/images/hero_glam_portrait_1792490187265.jpg',
-  bridalGlam: '/src/assets/images/service_bridal_glam_1792490187276.jpg',
-  braidsHair: '/src/assets/images/service_braids_hair_1792490187949.jpg',
-  manicureNails: '/src/assets/images/service_manicure_nails_1792490187881.jpg',
-  facialSpa: '/src/assets/images/service_facial_spa_1792490188418.jpg',
-  lashesBrows: '/src/assets/images/service_lashes_brows_1792490219518.jpg',
-  wigInstall: '/src/assets/images/service_wig_install_1792490219615.jpg',
+  heroPortrait: heroPortraitImg,
+  bridalGlam: bridalGlamImg,
+  braidsHair: braidsHairImg,
+  manicureNails: manicureNailsImg,
+  facialSpa: facialSpaImg,
+  lashesBrows: lashesBrowsImg,
+  wigInstall: wigInstallImg,
 };
 
 export interface ServiceItem {
